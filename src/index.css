@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+:root {
+  --blush-50: #fff5f7;
+  --blush-100: #ffe4ec;
+  --blush-200: #ffc9dc;
+  --blush-300: #ffa9c7;
+  --blush-400: #ff86ae;
+  --blush-500: #ff5e93;
+  --rose-deep: #d63a6f;
+  --lavender: #e7d9ff;
+  --cream: #fff9f2;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', system-ui, sans-serif;
+  background: #fff0f5;
+  color: #5a2a47;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.18), transparent 35%, rgba(255,255,255,0.2));
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Dreamy radial gradient backgrounds */
+.bg-dreamy {
+  background:
+    radial-gradient(ellipse at 18% 8%, #ffd9e8 0%, transparent 48%),
+    radial-gradient(ellipse at 82% 18%, #ffe4f3 0%, transparent 52%),
+    radial-gradient(ellipse at 50% 85%, #e8dcff 0%, transparent 52%),
+    radial-gradient(ellipse at 8% 92%, #ffd4c8 0%, transparent 48%),
+    linear-gradient(180deg, #fff7fa 0%, #ffe8f0 45%, #fff2f8 100%);
+}
+
+.bg-twilight {
+  background:
+    radial-gradient(ellipse at 28% 18%, rgba(255, 150, 190, 0.45) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 78%, rgba(180, 140, 255, 0.4) 0%, transparent 55%),
+    linear-gradient(180deg, #2a1848 0%, #4a2870 48%, #6b3a8a 100%);
+}
+
+.bg-starlight {
+  background:
+    radial-gradient(ellipse at 20% 30%, rgba(255, 160, 200, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 70%, rgba(255, 190, 160, 0.15) 0%, transparent 55%),
+    linear-gradient(180deg, #120a22 0%, #2a1540 48%, #4a2260 100%);
+}
+
+/* Floating hearts */
+@keyframes float-up {
+  0% {
+    transform: translateY(105vh) translateX(0) rotate(0deg) scale(0.55);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.75;
+  }
+  50% {
+    transform: translateY(45vh) translateX(24px) rotate(160deg) scale(1);
+  }
+  92% {
+    opacity: 0.55;
+  }
+  100% {
+    transform: translateY(-12vh) translateX(-18px) rotate(340deg) scale(0.75);
+    opacity: 0;
+  }
+}
+
+.heart-float {
+  position: absolute;
+  animation: float-up linear infinite;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform, opacity;
+}
+
+/* Sparkle twinkle */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.75);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+.twinkle {
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+
+/* Soft pulse glow */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 18px rgba(255, 134, 174, 0.35), 0 0 36px rgba(255, 134, 174, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(255, 134, 174, 0.6), 0 0 64px rgba(255, 134, 174, 0.28);
+  }
+}
+.pulse-glow {
+  animation: pulse-glow 3.2s ease-in-out infinite;
+}
+
+/* Heartbeat */
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.12);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.08);
+  }
+  56% {
+    transform: scale(1);
+  }
+}
+.heartbeat {
+  animation: heartbeat 1.7s ease-in-out infinite;
+}
+
+/* Glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  box-shadow: 0 18px 50px -18px rgba(214, 58, 111, 0.22);
+}
+
+.glass-dark {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+/* Paper texture for love letter */
+.paper {
+  background:
+    repeating-linear-gradient(
+      transparent,
+      transparent 30px,
+      rgba(214, 58, 111, 0.055) 31px
+    ),
+    linear-gradient(165deg, #fffaf5 0%, #fff3eb 55%, #ffefe6 100%);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 12px 36px rgba(214, 58, 111, 0.1),
+    0 32px 64px rgba(214, 58, 111, 0.07);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #ffe4ec;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff86ae, #d63a6f);
+  border-radius: 8px;
+}
+
+/* Selection */
+::selection {
+  background: #ffa9c7;
+  color: #5a0f30;
+}
+
+/* Soft film grain */
+.noise::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+@keyframes gentle-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+}
+
+.glass,
+.glass-dark {
+  animation: gentle-glow 8s ease-in-out infinite;
+}
+
+/* Gradient text */
+.text-gradient-love {
+  background: linear-gradient(135deg, #c0265c 0%, #e11d70 40%, #c026d3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .heart-float,
+  .twinkle,
+  .pulse-glow,
+  .heartbeat {
+    animation: none !important;
+  }
+}

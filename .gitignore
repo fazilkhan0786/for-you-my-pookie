@@ -1,0 +1,9 @@
+
+cat > .gitignore << 'EOF'
+node_modules/
+dist/
+.vite/
+*.local
+.DS_Store
+*.log
+EOF
