@@ -24,7 +24,7 @@ const INTRO = [
   "i made it because sometimes my chest gets so full of you",
   "that texts and voice notes just… aren't enough.",
   '',
-  "you are my favorite ordinary day.",
+  "you are my universe to be fan of.",
   "my soft place to land.",
   "the person i want to tell everything to — even the boring parts.",
   '',
